@@ -1,0 +1,1243 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>真人美图写真 - 官方影像门户 | 原创高清人像写真视频社区</title>
+<meta name="description" content="真人美图写真官方网站，专注原创高清人像写真影像内容生态，汇聚专业摄影师与模特创作者，提供写真教程、拍摄攻略、行业观察与企业动态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231f1b2e'/%3E%3Ccircle cx='32' cy='26' r='11' fill='%23e8b04b'/%3E%3Cpath d='M12 56c4-13 12-19 20-19s16 6 20 19z' fill='%23c0648c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --zr-bg:#f7f5f2;
+  --zr-ink:#1f1b2e;
+  --zr-ink-soft:#4b4558;
+  --zr-line:#e2dcd4;
+  --zr-gold:#b8860b;
+  --zr-gold-soft:#e8b04b;
+  --zr-rose:#c0648c;
+  --zr-rose-soft:#f0d3df;
+  --zr-card:#ffffff;
+  --zr-shadow:0 10px 30px rgba(31,27,46,.08);
+  --zr-radius:16px;
+  --zr-head:118px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;scroll-padding-top:var(--zr-head);}
+body{
+  margin:0;font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--zr-bg);color:var(--zr-ink);line-height:1.75;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button{font-family:inherit;cursor:pointer;}
+h1,h2,h3,h4{margin:0;line-height:1.35;font-weight:700;}
+p{margin:0 0 .9em;}
+ul{margin:0;padding:0;list-style:none;}
+
+.zr-wrap{width:min(1180px,92vw);margin:0 auto;}
+.zr-skip{position:absolute;left:-9999px;top:0;background:#fff;padding:8px 14px;z-index:300;}
+.zr-skip:focus{left:8px;top:8px;}
+
+/* ============ 吸顶：公告 + 页头 ============ */
+.zr-sticky{position:sticky;top:0;z-index:120;box-shadow:0 2px 14px rgba(31,27,46,.07);}
+.zr-notice{
+  background:linear-gradient(90deg,#1f1b2e,#3b2f4d 55%,#5a3d55);
+  color:#f4e9d8;font-size:13.5px;letter-spacing:.2px;
+}
+.zr-notice-inner{display:flex;align-items:center;gap:12px;padding:8px 0;overflow:hidden;}
+.zr-notice-tag{
+  flex:0 0 auto;background:var(--zr-gold-soft);color:#2a2010;font-weight:700;
+  font-size:12px;padding:2px 9px;border-radius:20px;letter-spacing:1px;
+}
+.zr-notice-scroll{flex:1 1 auto;overflow:hidden;white-space:nowrap;}
+.zr-notice-track{display:inline-flex;gap:38px;animation:zr-marquee 34s linear infinite;will-change:transform;}
+.zr-notice-track span{white-space:nowrap;opacity:.94;}
+.zr-notice-track b{color:var(--zr-gold-soft);}
+@keyframes zr-marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+.zr-notice-close{flex:0 0 auto;background:none;border:1px solid rgba(244,233,216,.45);color:#f4e9d8;border-radius:50%;width:22px;height:22px;line-height:1;font-size:13px;}
+.zr-head{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--zr-line);}
+.zr-head-inner{display:flex;align-items:center;gap:22px;padding:14px 0;flex-wrap:wrap;}
+.zr-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+.zr-brand-mark{width:44px;height:44px;border-radius:13px;background:linear-gradient(145deg,#1f1b2e,#5a3d55);display:grid;place-items:center;}
+.zr-brand-name{font-size:19px;font-weight:800;letter-spacing:.5px;line-height:1.2;}
+.zr-brand-sub{font-size:11px;color:var(--zr-ink-soft);letter-spacing:2.2px;}
+.zr-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap;}
+.zr-nav a{padding:7px 11px;border-radius:9px;font-size:14.5px;color:var(--zr-ink-soft);transition:.2s;}
+.zr-nav a:hover{background:var(--zr-rose-soft);color:var(--zr-ink);}
+.zr-head-tools{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.zr-search{display:flex;align-items:center;background:#f1ece6;border:1px solid transparent;border-radius:24px;padding:4px 5px 4px 14px;transition:.2s;}
+.zr-search:focus-within{border-color:var(--zr-gold-soft);background:#fff;box-shadow:0 0 0 3px rgba(232,176,75,.18);}
+.zr-search input{border:0;background:none;outline:none;width:150px;font-size:14px;color:var(--zr-ink);}
+.zr-search button{border:0;background:var(--zr-ink);color:#fff;border-radius:20px;padding:5px 13px;font-size:13px;}
+.zr-burger{display:none;border:1px solid var(--zr-line);background:#fff;border-radius:10px;width:42px;height:38px;font-size:18px;color:var(--zr-ink);}
+.zr-btn{display:inline-flex;align-items:center;gap:7px;border:0;border-radius:24px;padding:10px 20px;font-size:14.5px;font-weight:600;transition:transform .18s,box-shadow .18s,background .18s;}
+.zr-btn:hover{transform:translateY(-2px);}
+.zr-btn-primary{background:linear-gradient(120deg,#1f1b2e,#5a3d55);color:#fff;box-shadow:0 8px 20px rgba(90,61,85,.28);}
+.zr-btn-gold{background:var(--zr-gold-soft);color:#2a2010;box-shadow:0 8px 20px rgba(232,176,75,.3);}
+.zr-btn-ghost{background:#fff;color:var(--zr-ink);border:1px solid var(--zr-line);}
+.zr-btn-rose{background:var(--zr-rose);color:#fff;}
+
+/* ============ 首屏 ============ */
+.zr-hero{padding:52px 0 24px;}
+.zr-hero-grid{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,4fr);gap:44px;align-items:center;}
+.zr-hero-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;color:var(--zr-gold);font-weight:700;margin-bottom:18px;}
+.zr-hero-eyebrow::before{content:"";width:28px;height:2px;background:var(--zr-gold);}
+.zr-hero h1{font-size:clamp(34px,4.6vw,56px);letter-spacing:-.5px;margin-bottom:16px;color:var(--zr-ink);}
+.zr-hero h1 em{font-style:normal;color:var(--zr-rose);}
+.zr-hero-lead{font-size:16.5px;color:var(--zr-ink-soft);max-width:34em;margin-bottom:20px;}
+.zr-hero-intro{font-size:14.5px;color:var(--zr-ink-soft);background:#fff;border-left:3px solid var(--zr-gold-soft);border-radius:0 12px 12px 0;padding:14px 18px;margin-bottom:24px;}
+.zr-hero-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:26px;}
+.zr-stat{background:#fff;border:1px solid var(--zr-line);border-radius:14px;padding:14px 12px;text-align:center;}
+.zr-stat b{display:block;font-size:24px;letter-spacing:-.5px;color:var(--zr-ink);}
+.zr-stat span{font-size:12.5px;color:var(--zr-ink-soft);}
+.zr-hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.zr-hero-visual{position:relative;}
+.zr-hero-frame{border-radius:22px;overflow:hidden;box-shadow:0 26px 60px rgba(31,27,46,.18);aspect-ratio:4/5;background:#eee;}
+.zr-hero-frame svg{width:100%;height:100%;}
+.zr-hero-chip{
+  position:absolute;left:-16px;bottom:26px;background:#fff;border-radius:14px;padding:10px 16px;box-shadow:var(--zr-shadow);
+  font-size:13px;display:flex;align-items:center;gap:9px;border:1px solid var(--zr-line);
+}
+.zr-hero-chip i{width:9px;height:9px;border-radius:50%;background:#38b27a;display:inline-block;box-shadow:0 0 0 4px rgba(56,178,122,.18);}
+
+/* ============ 通用 section ============ */
+.zr-section{padding:44px 0;}
+.zr-sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-bottom:26px;}
+.zr-sec-kicker{font-size:12px;letter-spacing:2.4px;color:var(--zr-rose);font-weight:700;margin-bottom:6px;}
+.zr-sec-title{font-size:clamp(23px,2.7vw,31px);letter-spacing:-.3px;}
+.zr-sec-desc{font-size:14px;color:var(--zr-ink-soft);max-width:52ch;}
+.zr-section-alt{background:#fff;}
+.zr-section-deep{background:linear-gradient(180deg,#211c30,#2c2438);color:#efe8f0;}
+.zr-section-deep .zr-sec-desc,.zr-section-deep .zr-ink-soft{color:#c4b9cc;}
+
+/* ============ 标签 ============ */
+.zr-tags{display:flex;gap:8px;flex-wrap:wrap;}
+.zr-tag{font-size:12.5px;background:#fff;border:1px solid var(--zr-line);color:var(--zr-ink-soft);border-radius:20px;padding:3px 11px;}
+.zr-tag.is-active{background:var(--zr-ink);color:#fff;border-color:var(--zr-ink);}
+.zr-filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+.zr-filter{background:#fff;border:1px solid var(--zr-line);color:var(--zr-ink-soft);border-radius:20px;padding:6px 15px;font-size:13.5px;transition:.18s;}
+.zr-filter:hover{border-color:var(--zr-rose);color:var(--zr-ink);}
+.zr-filter.is-active{background:var(--zr-ink);color:#fff;border-color:var(--zr-ink);}
+
+/* ============ 焦点内容 ============ */
+.zr-focus-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,4fr);gap:30px;}
+.zr-focus-main{background:#fff;border-radius:var(--zr-radius);overflow:hidden;box-shadow:var(--zr-shadow);display:flex;flex-direction:column;}
+.zr-cover{position:relative;aspect-ratio:16/9;background:#ede7e0;overflow:hidden;}
+.zr-cover svg{width:100%;height:100%;}
+.zr-cover-badge{position:absolute;left:14px;top:14px;background:rgba(31,27,46,.82);color:#fff;font-size:12px;padding:4px 10px;border-radius:20px;letter-spacing:.5px;}
+.zr-cover-play{position:absolute;right:14px;bottom:14px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.2);}
+.zr-cover-play::before{content:"";display:block;margin-left:3px;border-left:13px solid var(--zr-ink);border-top:8px solid transparent;border-bottom:8px solid transparent;}
+.zr-focus-body{padding:22px 24px 24px;display:flex;flex-direction:column;gap:12px;flex:1;}
+.zr-focus-body h3{font-size:21px;}
+.zr-focus-body p{font-size:14px;color:var(--zr-ink-soft);margin:0;}
+.zr-meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8b8296;}
+.zr-focus-list{display:flex;flex-direction:column;gap:14px;}
+.zr-mini{background:#fff;border:1px solid var(--zr-line);border-radius:14px;padding:16px 18px;transition:.22s;}
+.zr-mini:hover{transform:translateX(4px);border-color:var(--zr-rose-soft);box-shadow:var(--zr-shadow);}
+.zr-mini h4{font-size:16px;margin-bottom:6px;}
+.zr-mini p{font-size:13.2px;color:var(--zr-ink-soft);margin:0 0 8px;}
+.zr-mini-meta{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:#8b8296;align-items:center;}
+
+/* ============ 视频流列表 ============ */
+.zr-video-list{display:flex;flex-direction:column;gap:0;}
+.zr-vitem{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px;align-items:center;padding:20px 4px;border-bottom:1px solid var(--zr-line);}
+.zr-vitem:first-child{border-top:1px solid var(--zr-line);}
+.zr-vitem-main h4{font-size:17.5px;margin-bottom:7px;}
+.zr-vitem-main p{font-size:13.6px;color:var(--zr-ink-soft);margin:0 0 9px;max-width:62ch;}
+.zr-vitem-side{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end;}
+.zr-act{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--zr-line);background:#fff;border-radius:20px;padding:5px 12px;font-size:12.8px;color:var(--zr-ink-soft);transition:.18s;}
+.zr-act:hover{border-color:var(--zr-rose);color:var(--zr-ink);}
+.zr-act.is-on{background:var(--zr-rose-soft);border-color:var(--zr-rose);color:#8e3f61;}
+.zr-author-line{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--zr-ink-soft);}
+.zr-avatar{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;font-size:11px;font-weight:700;color:#fff;flex:0 0 auto;}
+.zr-avatar-lg{width:56px;height:56px;border-radius:18px;font-size:20px;}
+
+/* ============ 专题 ============ */
+.zr-topic-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.zr-topic{background:#fff;border-radius:var(--zr-radius);border:1px solid var(--zr-line);padding:22px;display:flex;flex-direction:column;gap:11px;}
+.zr-topic .zr-cover{border-radius:12px;}
+.zr-topic-status{font-size:12px;color:var(--zr-gold);font-weight:700;letter-spacing:.6px;}
+.zr-topic ul{display:flex;flex-direction:column;gap:8px;font-size:13.4px;color:var(--zr-ink-soft);}
+.zr-topic ul li{display:flex;gap:8px;align-items:flex-start;}
+.zr-topic ul li::before{content:"";flex:0 0 auto;width:6px;height:6px;border-radius:50%;background:var(--zr-rose);margin-top:9px;}
+
+/* ============ 创作者 ============ */
+.zr-maker-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;}
+.zr-maker{background:#fff;border:1px solid var(--zr-line);border-radius:var(--zr-radius);padding:20px;display:flex;flex-direction:column;gap:12px;transition:.22s;}
+.zr-maker:hover{box-shadow:var(--zr-shadow);transform:translateY(-3px);}
+.zr-maker-top{display:flex;gap:13px;align-items:center;}
+.zr-maker-name{font-size:16.5px;font-weight:700;}
+.zr-maker-field{font-size:12.5px;color:var(--zr-rose);}
+.zr-maker p{font-size:13.3px;color:var(--zr-ink-soft);margin:0;}
+.zr-maker-stats{display:flex;gap:18px;font-size:12.5px;color:#8b8296;border-top:1px dashed var(--zr-line);padding-top:11px;}
+.zr-maker-stats b{display:block;color:var(--zr-ink);font-size:14.5px;}
+.zr-maker-more{align-self:flex-start;}
+
+/* ============ 评论 ============ */
+.zr-cmt-cols{columns:2;column-gap:22px;}
+.zr-cmt{break-inside:avoid;margin-bottom:20px;background:#fff;border:1px solid var(--zr-line);border-radius:14px;padding:18px;}
+.zr-cmt-top{display:flex;align-items:center;gap:10px;margin-bottom:9px;}
+.zr-cmt-name{font-size:13.5px;font-weight:700;}
+.zr-cmt-score{font-size:11.5px;color:var(--zr-gold);letter-spacing:1px;}
+.zr-cmt p{font-size:13.6px;color:var(--zr-ink-soft);margin:0;}
+.zr-rate-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:24px;}
+.zr-rate-box{background:#fff;border:1px solid var(--zr-line);border-radius:14px;padding:16px;text-align:center;}
+.zr-rate-box b{font-size:27px;display:block;letter-spacing:-.5px;}
+.zr-rate-box span{font-size:12.5px;color:var(--zr-ink-soft);}
+
+/* ============ 深度解析 ============ */
+.zr-deep-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px;}
+.zr-deep-grid h3{font-size:19px;margin:22px 0 10px;color:#f5e6c8;}
+.zr-deep-grid h3:first-child{margin-top:0;}
+.zr-deep-grid p{font-size:14.5px;color:#cfc4d6;line-height:1.86;}
+.zr-deep-figure{background:#2f2741;border:1px solid #453a5b;border-radius:16px;padding:10px;align-self:start;}
+.zr-deep-figure figcaption{font-size:12.5px;color:#b6a9c4;padding:10px 6px 4px;text-align:center;}
+
+/* ============ 动态 / FAQ / 合作 ============ */
+.zr-log{display:flex;flex-direction:column;gap:0;}
+.zr-log-item{display:grid;grid-template-columns:110px minmax(0,1fr);gap:18px;padding:16px 0;border-bottom:1px dashed var(--zr-line);}
+.zr-log-date{font-size:12.5px;color:var(--zr-rose);font-weight:700;letter-spacing:.4px;}
+.zr-log-item h4{font-size:15.5px;margin-bottom:5px;}
+.zr-log-item p{font-size:13.4px;color:var(--zr-ink-soft);margin:0;}
+.zr-faq{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;}
+.zr-faq details{background:#fff;border:1px solid var(--zr-line);border-radius:13px;padding:15px 18px;transition:.2s;}
+.zr-faq details[open]{border-color:var(--zr-gold-soft);box-shadow:var(--zr-shadow);}
+.zr-faq summary{font-size:15px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;}
+.zr-faq summary::-webkit-details-marker{display:none;}
+.zr-faq summary::after{content:"+";color:var(--zr-rose);font-size:19px;font-weight:700;transition:transform .2s;}
+.zr-faq details[open] summary::after{content:"–";}
+.zr-faq p{font-size:13.6px;color:var(--zr-ink-soft);margin:11px 0 0;}
+.zr-partners{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px;}
+.zr-partner{background:#fff;border:1px solid var(--zr-line);border-radius:14px;padding:18px;text-align:center;transition:.2s;}
+.zr-partner:hover{border-color:var(--zr-rose);}
+.zr-partner b{display:block;font-size:15px;margin-bottom:4px;}
+.zr-partner span{font-size:12.5px;color:var(--zr-ink-soft);}
+
+/* ============ 投稿 / 榜单 ============ */
+.zr-rank-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.zr-rank{background:#fff;border:1px solid var(--zr-line);border-radius:var(--zr-radius);padding:20px;}
+.zr-rank h3{font-size:16.5px;margin-bottom:13px;display:flex;align-items:center;gap:8px;}
+.zr-rank h3::before{content:"";width:4px;height:16px;border-radius:2px;background:var(--zr-rose);}
+.zr-rank ol{counter-reset:zr;display:flex;flex-direction:column;gap:9px;}
+.zr-rank li{counter-increment:zr;display:flex;gap:10px;align-items:baseline;font-size:13.6px;color:var(--zr-ink-soft);}
+.zr-rank li::before{content:counter(zr);flex:0 0 auto;width:20px;height:20px;border-radius:6px;background:#f1ece6;color:var(--zr-ink);font-size:12px;font-weight:700;display:grid;place-items:center;transform:translateY(2px);}
+.zr-rank li b{color:var(--zr-ink);font-weight:600;}
+.zr-cta-band{background:linear-gradient(120deg,#211c30,#5a3d55 70%,#8a4a66);color:#fff;border-radius:22px;padding:38px 34px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;}
+.zr-cta-band h2{font-size:clamp(22px,2.6vw,30px);margin-bottom:8px;}
+.zr-cta-band p{font-size:14px;color:#e3d6e6;margin:0;max-width:54ch;}
+.zr-cta-actions{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* ============ 页脚 ============ */
+.zr-foot{background:#171320;color:#c2b8cc;padding:48px 0 0;margin-top:20px;}
+.zr-foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:30px;padding-bottom:34px;}
+.zr-foot h4{color:#fff;font-size:15px;margin-bottom:13px;}
+.zr-foot p,.zr-foot li{font-size:13.3px;line-height:1.9;color:#a99db5;}
+.zr-foot li a:hover{color:var(--zr-gold-soft);}
+.zr-foot-bottom{border-top:1px solid #2c2538;padding:18px 0;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;color:#8d8199;}
+
+/* ============ 弹窗 / Toast ============ */
+.zr-modal{position:fixed;inset:0;z-index:260;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(23,19,32,.55);}
+.zr-modal.is-open{display:flex;}
+.zr-modal-box{background:#fff;border-radius:18px;max-width:480px;width:100%;padding:26px;box-shadow:0 30px 70px rgba(0,0,0,.34);max-height:86vh;overflow:auto;}
+.zr-modal-box h3{font-size:20px;margin-bottom:10px;}
+.zr-modal-box p{font-size:14px;color:var(--zr-ink-soft);}
+.zr-modal-box label{display:block;font-size:13px;margin:12px 0 5px;color:var(--zr-ink-soft);}
+.zr-modal-box input,.zr-modal-box textarea,.zr-modal-box select{width:100%;border:1px solid var(--zr-line);border-radius:10px;padding:9px 12px;font-size:14px;font-family:inherit;outline:none;}
+.zr-modal-box input:focus,.zr-modal-box textarea:focus{border-color:var(--zr-gold-soft);box-shadow:0 0 0 3px rgba(232,176,75,.16);}
+.zr-modal-actions{display:flex;gap:10px;justify-content:flex-end;margin-top:20px;flex-wrap:wrap;}
+.zr-toast{position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);background:#211c30;color:#fff;font-size:13.5px;padding:11px 22px;border-radius:24px;opacity:0;pointer-events:none;transition:.28s;z-index:300;box-shadow:0 14px 34px rgba(0,0,0,.3);}
+.zr-toast.is-show{opacity:1;transform:translate(-50%,0);}
+.zr-top{position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:50%;border:0;background:var(--zr-ink);color:#fff;font-size:17px;z-index:200;opacity:0;pointer-events:none;transition:.25s;box-shadow:0 10px 26px rgba(0,0,0,.24);}
+.zr-top.is-show{opacity:1;pointer-events:auto;}
+.zr-search-result{font-size:13.5px;color:var(--zr-ink-soft);background:#fff;border:1px dashed var(--zr-gold-soft);border-radius:12px;padding:11px 16px;margin-bottom:18px;display:none;}
+.zr-search-result.is-show{display:block;}
+
+@media (max-width:960px){
+  .zr-hero-grid,.zr-focus-grid,.zr-deep-grid{grid-template-columns:minmax(0,1fr);}
+  .zr-hero-visual{order:-1;}
+  .zr-hero-frame{aspect-ratio:16/11;}
+  .zr-cmt-cols{columns:1;}
+  .zr-cta-band{grid-template-columns:minmax(0,1fr);}
+  .zr-foot-grid{grid-template-columns:1fr 1fr;}
+  .zr-nav{display:none;order:5;flex-basis:100%;}
+  .zr-nav.is-open{display:flex;}
+  .zr-burger{display:block;}
+  .zr-head-tools{order:4;margin-left:auto;}
+  .zr-search input{width:110px;}
+}
+@media (max-width:620px){
+  .zr-hero-stats{grid-template-columns:1fr;}
+  .zr-vitem{grid-template-columns:minmax(0,1fr);}
+  .zr-vitem-side{justify-content:flex-start;}
+  .zr-log-item{grid-template-columns:minmax(0,1fr);gap:4px;}
+  .zr-foot-grid{grid-template-columns:1fr;}
+  .zr-notice-inner{padding:7px 0;}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="zr-skip" href="#zr-main">跳到主要内容</a>
+
+<div class="zr-sticky" id="zr-sticky">
+  <div class="zr-notice" id="zr-notice">
+    <div class="zr-wrap zr-notice-inner">
+      <span class="zr-notice-tag">官方发布</span>
+      <div class="zr-notice-scroll">
+        <div class="zr-notice-track">
+          <span>「冬日柔光」真人写真企划第 3 期征集开启，<b>12 月 05 日</b> 截止投稿</span>
+          <span>年度高清写真大赛报名通道已开放，<b>共 6 个组别</b></span>
+          <span>创作者扶持计划新增 <b>20 个</b> 名额，专注人像与在地记录</span>
+          <span>「影棚灯光 12 讲」系列课程全 12 期已上线，支持高清下载</span>
+          <span>「冬日柔光」真人写真企划第 3 期征集开启，<b>12 月 05 日</b> 截止投稿</span>
+          <span>年度高清写真大赛报名通道已开放，<b>共 6 个组别</b></span>
+          <span>创作者扶持计划新增 <b>20 个</b> 名额，专注人像与在地记录</span>
+          <span>「影棚灯光 12 讲」系列课程全 12 期已上线，支持高清下载</span>
+        </div>
+      </div>
+      <button class="zr-notice-close" id="zr-notice-close" aria-label="收起公告">×</button>
+    </div>
+  </div>
+  <header class="zr-head">
+    <div class="zr-wrap zr-head-inner">
+      <a class="zr-brand" href="#zr-hero" aria-label="真人美图写真官网首页">
+        <span class="zr-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" width="26" height="26"><circle cx="20" cy="15" r="7" fill="#e8b04b"/><path d="M6 36c3-9 8-13 14-13s11 4 14 13z" fill="#c0648c"/></svg>
+        </span>
+        <span>
+          <span class="zr-brand-name">真人美图写真</span>
+          <span class="zr-brand-sub">PORTRAIT&nbsp;VIDEO&nbsp;OFFICIAL</span>
+        </span>
+      </a>
+      <nav class="zr-nav" id="zr-nav" aria-label="主导航">
+        <a href="#zr-focus">精选内容</a>
+        <a href="#zr-videos">影像流</a>
+        <a href="#zr-topics">专题企划</a>
+        <a href="#zr-makers">创作者</a>
+        <a href="#zr-voices">口碑评价</a>
+        <a href="#zr-deep">深度解析</a>
+        <a href="#zr-faq">帮助</a>
+      </nav>
+      <div class="zr-head-tools">
+        <form class="zr-search" id="zr-search-form" role="search">
+          <input type="search" id="zr-search-input" placeholder="搜索写真 / 创作者 / 教程" aria-label="站内搜索">
+          <button type="submit">搜索</button>
+        </form>
+        <button class="zr-btn zr-btn-gold" id="zr-submit-open" type="button">我要投稿</button>
+        <button class="zr-burger" id="zr-burger" aria-label="展开导航" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="zr-main">
+
+  <!-- S2 品牌首屏 -->
+  <section class="zr-hero zr-wrap" id="zr-hero">
+    <div class="zr-hero-grid">
+      <div>
+        <div class="zr-hero-eyebrow">官方网站 · 品牌影像门户</div>
+        <h1>真人美图写真</h1>
+        <p class="zr-hero-lead">专注原创高清人像写真影像的企业级内容平台，用真实的光线、克制的表达与专业的技术，记录每一个值得被认真对待的瞬间。</p>
+        <div class="zr-hero-intro">
+          作为人像写真垂直领域持续运营的官方网站，真人美图写真平台聚集摄影师、模特、造型师与后期创作者，围绕写真教程、拍摄攻略、作品展示与行业观察搭建品质内容生态。我们坚持正版原创与高清呈现，为创作者提供稳定成长通道，也为用户带来值得信赖的视觉陪伴。
+        </div>
+        <div class="zr-hero-stats">
+          <div class="zr-stat"><b>2,860+</b><span>原创高清作品</span></div>
+          <div class="zr-stat"><b>1,240+</b><span>认证创作者</span></div>
+          <div class="zr-stat"><b>1.9 亿</b><span>累计播放量</span></div>
+        </div>
+        <div class="zr-hero-actions">
+          <a class="zr-btn zr-btn-primary" href="#zr-videos">进入影像流</a>
+          <a class="zr-btn zr-btn-ghost" href="#zr-topics">查看专题企划</a>
+          <button class="zr-btn zr-btn-rose" id="zr-share-open" type="button">分享官网</button>
+        </div>
+      </div>
+      <div class="zr-hero-visual">
+        <figure class="zr-hero-frame" style="margin:0">
+          <svg viewBox="0 0 480 600" role="img" aria-label="窗边自然光下的半身人像写真主视觉，暖金色调">
+            <defs>
+              <linearGradient id="zr-hero-bg" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#f4e3cc"/><stop offset="1" stop-color="#d9b3a8"/>
+              </linearGradient>
+              <linearGradient id="zr-hero-light" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#fff6e6" stop-opacity=".95"/><stop offset="1" stop-color="#fff6e6" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="zr-hero-hair" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#3a2a2f"/><stop offset="1" stop-color="#5c4149"/>
+              </linearGradient>
+            </defs>
+            <rect width="480" height="600" fill="url(#zr-hero-bg)"/>
+            <rect x="300" y="0" width="180" height="600" fill="url(#zr-hero-light)"/>
+            <rect x="312" y="46" width="120" height="330" rx="6" fill="#fdf7ee" opacity=".7"/>
+            <rect x="348" y="46" width="4" height="330" fill="#c9a98f" opacity=".6"/>
+            <path d="M0 600V470c60-22 130-30 190-14 66 18 130 12 180-24 40-29 80-38 110-32v200z" fill="#b9806f" opacity=".35"/>
+            <ellipse cx="205" cy="238" rx="76" ry="92" fill="#f2cdb4"/>
+            <path d="M129 236c0-72 34-124 76-124s76 52 76 124c0 12-4 22-10 26 0-70-30-104-66-104s-66 34-66 104c-6-4-10-14-10-26z" fill="url(#zr-hero-hair)"/>
+            <path d="M150 200c14-36 38-52 55-52s41 16 55 52c-12-24-32-34-55-34s-43 10-55 34z" fill="#6d4c55" opacity=".55"/>
+            <circle cx="181" cy="240" r="5" fill="#3a2a2f"/><circle cx="231" cy="240" r="5" fill="#3a2a2f"/>
+            <path d="M180 216c6-5 15-5 21 0M212 216c6-5 15-5 21 0" stroke="#4a333a" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M198 244c2 8 8 12 14 12" stroke="#d39d84" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <path d="M193 282c8 7 22 7 30 0" stroke="#b96a6a" stroke-width="4" fill="none" stroke-linecap="round"/>
+            <path d="M205 320c-30-2-56 12-68 30l-16 250h168l-16-250c-12-18-38-32-68-30z" fill="#c0648c"/>
+            <path d="M205 320c-12 0-22 2-30 6l6 274h48l6-274c-8-4-18-6-30-6z" fill="#d586a7" opacity=".7"/>
+            <path d="M137 350c-14 26-16 60-4 88" stroke="#a8526f" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <path d="M273 350c14 26 16 60 4 88" stroke="#a8526f" stroke-width="5" fill="none" stroke-linecap="round"/>
+            <circle cx="120" cy="150" r="26" fill="#fff" opacity=".42"/>
+            <circle cx="360" cy="120" r="14" fill="#fff" opacity=".3"/>
+            <circle cx="410" cy="430" r="40" fill="#fff" opacity=".14"/>
+          </svg>
+        </figure>
+        <div class="zr-hero-chip"><i></i>本周新增 42 部原创写真作品</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 焦点内容 + 文字推荐 -->
+  <section class="zr-section zr-wrap" id="zr-focus">
+    <div class="zr-sec-head">
+      <div>
+        <div class="zr-sec-kicker">FOCUS · 精选焦点</div>
+        <h2 class="zr-sec-title">本周焦点：真人美图写真编辑部推荐</h2>
+        <p class="zr-sec-desc">以原创为底线，以高清为标准。焦点区每周由企划组与创作者共振产生，涵盖教程、测评与人物故事。</p>
+      </div>
+      <a class="zr-btn zr-btn-ghost" href="#zr-videos">全部作品</a>
+    </div>
+    <div class="zr-focus-grid">
+      <article class="zr-focus-main">
+        <div class="zr-cover">
+          <svg viewBox="0 0 640 360" role="img" aria-label="晨雾中的窗边人像写真封面，冷灰蓝调与逆光轮廓">
+            <defs>
+              <linearGradient id="zr-f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#b9c6cf"/><stop offset="1" stop-color="#6f8291"/></linearGradient>
+            </defs>
+            <rect width="640" height="360" fill="url(#zr-f1)"/>
+            <rect x="40" y="40" width="240" height="280" rx="4" fill="#e6eef2" opacity=".85"/>
+            <path d="M160 40v280M40 170h240" stroke="#9fb2bd" stroke-width="3"/>
+            <circle cx="430" cy="160" r="62" fill="#f0e2d8"/>
+            <path d="M368 148c0-52 28-84 62-84s62 32 62 84c0 10-3 18-8 22 0-52-24-74-54-74s-54 22-54 74c-5-4-8-12-8-22z" fill="#4b4147"/>
+            <path d="M430 222c-40 0-72 22-86 48l-18 90h208l-18-90c-14-26-46-48-86-48z" fill="#4e6b7d"/>
+            <circle cx="410" cy="162" r="4" fill="#3b3338"/><circle cx="452" cy="162" r="4" fill="#3b3338"/>
+            <circle cx="560" cy="86" r="26" fill="#fff" opacity=".22"/>
+            <circle cx="80" cy="300" r="46" fill="#fff" opacity=".1"/>
+          </svg>
+          <span class="zr-cover-badge">编辑精选</span>
+          <span class="zr-cover-play" aria-hidden="true"></span>
+        </div>
+        <div class="zr-focus-body">
+          <h3>晨雾窗光：一组克制的人像写真全流程记录</h3>
+          <p>从测光、白平衡到模特引导，完整还原一组冷调晨雾写真的拍摄现场。全片 18 分钟，含 6 段实拍参数与 3 组前后期对照。</p>
+          <div class="zr-tags">
+            <span class="zr-tag">拍摄幕后</span><span class="zr-tag">自然光</span><span class="zr-tag">高清</span>
+          </div>
+          <div class="zr-meta">
+            <span class="zr-author-line"><span class="zr-avatar" style="background:#6f8291">沈</span>沈砚</span>
+            <span>32.6 万播放</span><span>1.8 万点赞</span><span>4,206 收藏</span>
+          </div>
+          <div class="zr-tags">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+            <button class="zr-act" data-report type="button">反馈</button>
+          </div>
+        </div>
+      </article>
+      <div class="zr-focus-list">
+        <article class="zr-mini">
+          <h4>一部手机的写真可能：自然人像拍摄攻略</h4>
+          <p>不讲玄学，只讲可复现的机位、测光与滑动曝光。适合第一次拍真人美图写真的创作者。</p>
+          <div class="zr-mini-meta"><span>教程干货</span><span>林见夏</span><span>18.4 万播放</span></div>
+        </article>
+        <article class="zr-mini">
+          <h4>影棚灯光十二讲：主灯、辅灯与轮廓的秩序</h4>
+          <p>用 12 个具体布光案例解释影棚逻辑，每一讲附布光图与实拍样张，可反复对照练习。</p>
+          <div class="zr-mini-meta"><span>实用技巧</span><span>程野</span><span>15.2 万播放</span></div>
+        </article>
+        <article class="zr-mini">
+          <h4>与三位写真摄影师聊「真实」这件事</h4>
+          <p>他们都在拍人像，但对真实的定义不同。一场关于审美、边界与尊重的深度对话。</p>
+          <div class="zr-mini-meta"><span>人物访谈</span><span>平台企划</span><span>9.7 万播放</span></div>
+        </article>
+        <article class="zr-mini">
+          <h4>胶片色彩复现：五种常见底片的数字化方案</h4>
+          <p>从扫描到曲线，逐层拆解胶片色调的复现路径，附可直接套用的调色参考。</p>
+          <div class="zr-mini-meta"><span>深度测评</span><span>白寄</span><span>11.1 万播放</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S3 视频流 -->
+  <section class="zr-section zr-section-alt" id="zr-videos">
+    <div class="zr-wrap">
+      <div class="zr-sec-head">
+        <div>
+          <div class="zr-sec-kicker">STREAM · 影像流</div>
+          <h2 class="zr-sec-title">真人美图写真影像流</h2>
+          <p class="zr-sec-desc">每一条内容都经过人工审核，标注创作者、标签与数据。点击标签可筛选，点赞与收藏实时记录。</p>
+        </div>
+      </div>
+      <div class="zr-filter-bar" id="zr-filter-bar" role="group" aria-label="标签筛选">
+        <button class="zr-filter is-active" data-filter="all" type="button">全部</button>
+        <button class="zr-filter" data-filter="教程干货" type="button">教程干货</button>
+        <button class="zr-filter" data-filter="拍摄幕后" type="button">拍摄幕后</button>
+        <button class="zr-filter" data-filter="人物访谈" type="button">人物访谈</button>
+        <button class="zr-filter" data-filter="深度测评" type="button">深度测评</button>
+        <button class="zr-filter" data-filter="城市探索" type="button">城市探索</button>
+      </div>
+      <div class="zr-search-result" id="zr-search-result" aria-live="polite"></div>
+      <div class="zr-video-list" id="zr-video-list">
+        <article class="zr-vitem" data-tag="教程干货">
+          <div class="zr-vitem-main">
+            <h4>三分法之外：人像写真的九种构图思路</h4>
+            <p>用九组同场景对照说明对称、引导线、留白与框架构图在真人美图写真中的实际效果，附参数与取景建议。</p>
+            <div class="zr-tags"><span class="zr-tag">教程干货</span><span class="zr-tag">构图</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#b8860b">林</span>林见夏</span><span>21.3 万播放</span><span>9,840 点赞</span><span>2,512 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <article class="zr-vitem" data-tag="拍摄幕后">
+          <div class="zr-vitem-main">
+            <h4>一次失败的拍摄如何变成年度作品</h4>
+            <p>模特状态不佳、场地临时变更、天色突然转阴，团队如何在 40 分钟内重排方案，把意外变成风格。</p>
+            <div class="zr-tags"><span class="zr-tag">拍摄幕后</span><span class="zr-tag">真实记录</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#c0648c">程</span>程野</span><span>17.9 万播放</span><span>7,260 点赞</span><span>1,904 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <article class="zr-vitem" data-tag="人物访谈">
+          <div class="zr-vitem-main">
+            <h4>从模特到创作者：她镜头里的自己与别人</h4>
+            <p>五年时间，从被拍摄到主导拍摄。访谈中她谈到信任、沟通与写真中那条不能越过的边界。</p>
+            <div class="zr-tags"><span class="zr-tag">人物访谈</span><span class="zr-tag">创作者成长</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#3b7f6e">苏</span>苏晚</span><span>13.5 万播放</span><span>5,940 点赞</span><span>1,388 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <article class="zr-vitem" data-tag="深度测评">
+          <div class="zr-vitem-main">
+            <h4>四支人像镜头横评：焦段决定的是什么</h4>
+            <p>35、50、85、135 四支常用焦段在同一场景下的画面差异，用同一模特、同一光线做可控对比。</p>
+            <div class="zr-tags"><span class="zr-tag">深度测评</span><span class="zr-tag">器材</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#7a5aa8">白</span>白寄</span><span>12.8 万播放</span><span>4,760 点赞</span><span>2,036 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <article class="zr-vitem" data-tag="城市探索">
+          <div class="zr-vitem-main">
+            <h4>老城区三小时：在城市纹理里拍一组写真</h4>
+            <p>沿着旧街、骑楼与斑驳墙面行走，怎样用人像回应城市的质感，并避免打扰居民生活。</p>
+            <div class="zr-tags"><span class="zr-tag">城市探索</span><span class="zr-tag">在地文化</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#a8526f">周</span>周予安</span><span>10.4 万播放</span><span>3,890 点赞</span><span>1,012 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <article class="zr-vitem" data-tag="教程干货">
+          <div class="zr-vitem-main">
+            <h4>坐姿与手位：让普通人放松下来的 12 个提示</h4>
+            <p>不讲“摆造型”，而是给具体可执行的引导句式，让第一次面对镜头的人也能自然出镜。</p>
+            <div class="zr-tags"><span class="zr-tag">教程干货</span><span class="zr-tag">模特引导</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#6f8291">沈</span>沈砚</span><span>16.1 万播放</span><span>8,120 点赞</span><span>3,105 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+        <article class="zr-vitem" data-tag="拍摄幕后">
+          <div class="zr-vitem-main">
+            <h4>雨天不撤退：一组潮湿质感写真的诞生</h4>
+            <p>防水处理、机位保护与光比控制，雨天拍摄的完整预案，以及为什么水汽会成为画面的一部分。</p>
+            <div class="zr-tags"><span class="zr-tag">拍摄幕后</span><span class="zr-tag">天气创作</span></div>
+            <div class="zr-mini-meta" style="margin-top:9px"><span class="zr-author-line"><span class="zr-avatar" style="background:#b8860b">林</span>林见夏</span><span>9.6 万播放</span><span>3,610 点赞</span><span>928 收藏</span></div>
+          </div>
+          <div class="zr-vitem-side">
+            <button class="zr-act" data-like type="button">♡ 点赞</button>
+            <button class="zr-act" data-fav type="button">☆ 收藏</button>
+            <button class="zr-act" data-copy type="button">复制链接</button>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4 专题企划 -->
+  <section class="zr-section zr-wrap" id="zr-topics">
+    <div class="zr-sec-head">
+      <div>
+        <div class="zr-sec-kicker">PROGRAM · 专题企划</div>
+        <h2 class="zr-sec-title">正在进行的真人美图写真专题</h2>
+        <p class="zr-sec-desc">平台企划由编辑部与创作者共同推进，持续更新，所有内容坚持原创与正版授权。</p>
+      </div>
+    </div>
+    <div class="zr-topic-grid">
+      <article class="zr-topic">
+        <div class="zr-cover">
+          <svg viewBox="0 0 480 270" role="img" aria-label="冬日柔光专题封面，雪地暖光下的侧脸人像剪影">
+            <defs><linearGradient id="zr-t1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dfe6ec"/><stop offset="1" stop-color="#a8b6c2"/></linearGradient></defs>
+            <rect width="480" height="270" fill="url(#zr-t1)"/>
+            <circle cx="360" cy="70" r="42" fill="#fff2d8" opacity=".9"/>
+            <path d="M0 270V196c52-26 104-30 156-12 58 20 122 18 176-8 46-22 98-24 148-6v100z" fill="#f7f9fb"/>
+            <ellipse cx="192" cy="126" rx="34" ry="41" fill="#e9c3aa"/>
+            <path d="M158 122c0-32 15-56 34-56s34 24 34 56c0 6-2 10-4 12 0-32-13-46-30-46s-30 14-30 46c-2-2-4-6-4-12z" fill="#4d3d42"/>
+            <path d="M192 167c-24 0-44 14-52 30l-10 73h124l-10-73c-8-16-28-30-52-30z" fill="#c0648c" opacity=".8"/>
+          </svg>
+        </div>
+        <span class="zr-topic-status">更新中 · 第 3 期</span>
+        <h3 style="font-size:18px">冬日柔光企划</h3>
+        <p style="font-size:13.5px;color:#4b4558;margin:0">在低角度光线与寒冷空气之间寻找温柔的人像表达，聚焦自然光写真。</p>
+        <ul>
+          <li>低角度日光下的人像测光与补光</li>
+          <li>雪地与灰墙背景的色彩搭配思路</li>
+          <li>冬季拍摄的模特保暖与状态管理</li>
+        </ul>
+      </article>
+      <article class="zr-topic">
+        <div class="zr-cover">
+          <svg viewBox="0 0 480 270" role="img" aria-label="在地肖像专题封面，老城墙与窗格前的半身人像">
+            <defs><linearGradient id="zr-t2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e3cdb2"/><stop offset="1" stop-color="#b0876a"/></linearGradient></defs>
+            <rect width="480" height="270" fill="url(#zr-t2)"/>
+            <rect x="30" y="34" width="130" height="200" fill="#f0e0c9" opacity=".55"/>
+            <path d="M60 34v200M95 34v200M130 34v200M30 90h130M30 150h130" stroke="#9b7154" stroke-width="3" opacity=".6"/>
+            <ellipse cx="316" cy="118" rx="38" ry="46" fill="#f0cdb2"/>
+            <path d="M278 112c0-36 17-62 38-62s38 26 38 62c0 7-2 12-5 14 0-36-15-52-33-52s-33 16-33 52c-3-2-5-7-5-14z" fill="#3f3138"/>
+            <path d="M316 164c-27 0-49 15-58 33l-11 73h138l-11-73c-9-18-31-33-58-33z" fill="#7c5c8f" opacity=".82"/>
+            <circle cx="410" cy="58" r="30" fill="#fff" opacity=".2"/>
+          </svg>
+        </div>
+        <span class="zr-topic-status">长期更新</span>
+        <h3 style="font-size:18px">在地肖像计划</h3>
+        <p style="font-size:13.5px;color:#4b4558;margin:0">把人像放回城市环境，记录街道、屋檐与人的关系，尊重在地生活。</p>
+        <ul>
+          <li>老城街区的拍摄动线与沟通礼仪</li>
+          <li>骑楼、巷弄、天台的取景方案</li>
+          <li>本地创作者镜头下的城市面孔</li>
+        </ul>
+      </article>
+      <article class="zr-topic">
+        <div class="zr-cover">
+          <svg viewBox="0 0 480 270" role="img" aria-label="影棚灯光专题封面，柔光箱与三脚架的组合示意">
+            <rect width="480" height="270" fill="#2a2336"/>
+            <circle cx="150" cy="96" r="56" fill="#f4e2b8" opacity=".9"/>
+            <rect x="120" y="80" width="60" height="60" fill="#f4e2b8" opacity=".5"/>
+            <path d="M150 152v86M118 238h64" stroke="#8b7fa0" stroke-width="5" stroke-linecap="round"/>
+            <rect x="300" y="60" width="90" height="120" rx="8" fill="#4b3f61"/>
+            <rect x="318" y="78" width="54" height="84" rx="4" fill="#c0648c" opacity=".7"/>
+            <path d="M240 270V120" stroke="#5c5074" stroke-width="3"/>
+            <circle cx="380" cy="212" r="18" fill="#e8b04b" opacity=".7"/>
+          </svg>
+        </div>
+        <span class="zr-topic-status">已完结 · 12 讲</span>
+        <h3 style="font-size:18px">影棚灯光十二讲</h3>
+        <p style="font-size:13.5px;color:#4b4558;margin:0">从一盏灯到三盏灯的系统课程，面向希望进入专业拍摄的真人美图写真创作者。</p>
+        <ul>
+          <li>主灯位置与鼻影的关系</li>
+          <li>辅灯与反光板的柔化控制</li>
+          <li>轮廓灯、发丝灯与小闪的应用场景</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- S5 创作者 -->
+  <section class="zr-section zr-section-alt" id="zr-makers">
+    <div class="zr-wrap">
+      <div class="zr-sec-head">
+        <div>
+          <div class="zr-sec-kicker">CREATORS · 创作者矩阵</div>
+          <h2 class="zr-sec-title">真人美图写真的创作者们</h2>
+          <p class="zr-sec-desc">他们来自不同城市与背景，共同点是持续创作、尊重被摄者、愿意分享方法。</p>
+        </div>
+      </div>
+      <div class="zr-maker-grid">
+        <article class="zr-maker">
+          <div class="zr-maker-top">
+            <span class="zr-avatar zr-avatar-lg" style="background:#6f8291">沈</span>
+            <div><div class="zr-maker-name">沈砚</div><div class="zr-maker-field">自然光 · 人像叙事</div></div>
+          </div>
+          <p>从业八年，偏爱用一扇窗完成整组写真。擅长在有限光线里做取舍，也常把失败现场公开成课程。相信写真首先是人与人的信任，其次才是技术。</p>
+          <div class="zr-maker-stats"><span><b>186</b>作品</span><span><b>42.3 万</b>粉丝</span><span><b>认证</b>创作者</span></div>
+          <button class="zr-btn zr-btn-ghost zr-maker-more" data-maker="沈砚|自然光 · 人像叙事|八年自然光实践经验，代表作《晨雾窗光》系列。课程强调可复现的测光与引导方法，累计培养学员超过三千人。" type="button">查看档案</button>
+        </article>
+        <article class="zr-maker">
+          <div class="zr-maker-top">
+            <span class="zr-avatar zr-avatar-lg" style="background:#b8860b">林</span>
+            <div><div class="zr-maker-name">林见夏</div><div class="zr-maker-field">构图 · 移动端写真</div></div>
+          </div>
+          <p>专注用手机完成专业级写真的实践者。她的内容强调可操作性，习惯把每个结论拆成三步演示。对普通人如何面对镜头有长期观察，交付稳定。</p>
+          <div class="zr-maker-stats"><span><b>142</b>作品</span><span><b>35.8 万</b>粉丝</span><span><b>认证</b>创作者</span></div>
+          <button class="zr-btn zr-btn-ghost zr-maker-more" data-maker="林见夏|构图 · 移动端写真|移动端人像教学的长期实践者，主张把复杂拍摄拆成可执行的步骤，作品以干净构图与清晰讲解著称。" type="button">查看档案</button>
+        </article>
+        <article class="zr-maker">
+          <div class="zr-maker-top">
+            <span class="zr-avatar zr-avatar-lg" style="background:#c0648c">程</span>
+            <div><div class="zr-maker-name">程野</div><div class="zr-maker-field">影棚 · 商业人像</div></div>
+          </div>
+          <p>影棚出身，做过多年商业拍摄。他把大型项目的流程压缩成小团队可用的方法，尤其擅长布光效率与现场沟通。课程里常出现真实甲方的需求与妥协。</p>
+          <div class="zr-maker-stats"><span><b>98</b>作品</span><span><b>27.1 万</b>粉丝</span><span><b>认证</b>创作者</span></div>
+          <button class="zr-btn zr-btn-ghost zr-maker-more" data-maker="程野|影棚 · 商业人像|十年商业摄影经验，主讲影棚灯光十二讲，强调效率、秩序与对合作方的尊重，课程以实战流程见长。" type="button">查看档案</button>
+        </article>
+        <article class="zr-maker">
+          <div class="zr-maker-top">
+            <span class="zr-avatar zr-avatar-lg" style="background:#7a5aa8">白</span>
+            <div><div class="zr-maker-name">白寄</div><div class="zr-maker-field">后期 · 色彩与质感</div></div>
+          </div>
+          <p>后期师，也拍写真。关注色彩如何影响情绪，常做胶片与数码的对照实验。更新节奏克制，但每期都有完整的参数与思路，被同行称为资料型创作者。</p>
+          <div class="zr-maker-stats"><span><b>76</b>作品</span><span><b>19.4 万</b>粉丝</span><span><b>优质</b>创作者</span></div>
+          <button class="zr-btn zr-btn-ghost zr-maker-more" data-maker="白寄|后期 · 色彩与质感|专注人像后期与色彩研究，擅长把调色过程拆解成可复现的步骤，作品资料详实，深受进阶创作者欢迎。" type="button">查看档案</button>
+        </article>
+        <article class="zr-maker">
+          <div class="zr-maker-top">
+            <span class="zr-avatar zr-avatar-lg" style="background:#3b7f6e">苏</span>
+            <div><div class="zr-maker-name">苏晚</div><div class="zr-maker-field">模特 · 创作者双身份</div></div>
+          </div>
+          <p>从被拍摄者走到镜头之后，她关注写真中的沟通与边界。内容常以第一人称讲述拍摄现场的感受，也分享普通人如何准备自己的第一组写真。</p>
+          <div class="zr-maker-stats"><span><b>64</b>作品</span><span><b>22.6 万</b>粉丝</span><span><b>认证</b>创作者</span></div>
+          <button class="zr-btn zr-btn-ghost zr-maker-more" data-maker="苏晚|模特 · 创作者双身份|从模特转型为创作者，长期关注拍摄中的沟通与尊重议题，用亲身经历讲述写真现场的另一面。" type="button">查看档案</button>
+        </article>
+        <article class="zr-maker">
+          <div class="zr-maker-top">
+            <span class="zr-avatar zr-avatar-lg" style="background:#a8526f">周</span>
+            <div><div class="zr-maker-name">周予安</div><div class="zr-maker-field">城市探索 · 纪实人像</div></div>
+          </div>
+          <p>习惯提前一周踩点，把人像放进真实街区。他坚持不打扰居民，也坚持记录城市变化的细节。作品节奏慢，但每一组都有完整的地点与许可说明。</p>
+          <div class="zr-maker-stats"><span><b>88</b>作品</span><span><b>16.9 万</b>粉丝</span><span><b>优质</b>创作者</span></div>
+          <button class="zr-btn zr-btn-ghost zr-maker-more" data-maker="周予安|城市探索 · 纪实人像|以城市为背景的纪实人像创作者，拍摄前坚持踩点与沟通，作品保留大量在地文化细节，态度克制。" type="button">查看档案</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- S6 口碑评价 + 榜单 -->
+  <section class="zr-section zr-wrap" id="zr-voices">
+    <div class="zr-sec-head">
+      <div>
+        <div class="zr-sec-kicker">VOICES · 口碑与榜单</div>
+        <h2 class="zr-sec-title">用户如何评价真人美图写真</h2>
+        <p class="zr-sec-desc">来自创作者、学习者与普通观众的真实反馈，构成平台最直接的口碑来源。</p>
+      </div>
+    </div>
+    <div class="zr-rate-summary">
+      <div class="zr-rate-box"><b>4.8</b><span>综合口碑评分</span></div>
+      <div class="zr-rate-box"><b>96%</b><span>内容原创率</span></div>
+      <div class="zr-rate-box"><b>7.2 万</b><span>注册创作者</span></div>
+      <div class="zr-rate-box"><b>31</b><span>覆盖城市</span></div>
+    </div>
+    <div class="zr-cmt-cols">
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#b8860b">摄</span><span class="zr-cmt-name">摄影师阿舟</span><span class="zr-cmt-score">★★★★★</span></div>
+        <p>跟了两期影棚课程，把自己棚里的布光重新排了一遍，客户对成片的反馈明显变好。最有价值的是老师会把失败案例也放出来。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#3b7f6e">小</span><span class="zr-cmt-name">小鹿不会拍</span><span class="zr-cmt-score">★★★★★</span></div>
+        <p>作为完全的新手，第一次知道原来手机也能拍出这种质感。构图那期我反复看了四遍，照着练了一下午确实有变化。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#c0648c">林</span><span class="zr-cmt-name">林间有风</span><span class="zr-cmt-score">★★★★☆</span></div>
+        <p>内容质量很稳，就是希望多出一点室外自然光的案例。影棚内容已经很系统了，户外部分还可以再细一些。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#7a5aa8">模</span><span class="zr-cmt-name">模特小Y</span><span class="zr-cmt-score">★★★★★</span></div>
+        <p>苏晚那期访谈看哭了。拍摄中的边界和沟通真的很少被拿出来讲，平台愿意做这样的内容，很难得。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#6f8291">后</span><span class="zr-cmt-name">后期老陈</span><span class="zr-cmt-score">★★★★☆</span></div>
+        <p>调色教程的专业度超出预期，参数都给全了，不像很多地方只给一个氛围。可惜更新频率偏低，希望能更快一些。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#a8526f">周</span><span class="zr-cmt-name">周末去拍照</span><span class="zr-cmt-score">★★★★★</span></div>
+        <p>在地肖像计划我几乎每期都看，踩点信息很实用，还特别提醒不要打扰居民，这种态度比技巧更打动人。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#b8860b">独</span><span class="zr-cmt-name">独立摄影师K</span><span class="zr-cmt-score">★★★★☆</span></div>
+        <p>投稿流程清晰，审核反馈也具体，不是一句不通过就完了。作为小创作者，能感到平台是真的在做内容生态。</p>
+      </article>
+      <article class="zr-cmt">
+        <div class="zr-cmt-top"><span class="zr-avatar" style="background:#3b7f6e">观</span><span class="zr-cmt-name">只看不拍</span><span class="zr-cmt-score">★★★★★</span></div>
+        <p>我不拍照，就是喜欢看。这里的写真不靠夸张滤镜，画面干净，看着很舒服，高清下载后当壁纸也很好。</p>
+      </article>
+    </div>
+    <div class="zr-rank-grid" style="margin-top:34px">
+      <div class="zr-rank">
+        <h3>本周热度榜</h3>
+        <ol>
+          <li><b>晨雾窗光：全流程记录</b> · 沈砚</li>
+          <li><b>三分法之外：九种构图</b> · 林见夏</li>
+          <li><b>一次失败的拍摄</b> · 程野</li>
+          <li><b>坐姿与手位 12 个提示</b> · 沈砚</li>
+          <li><b>四支人像镜头横评</b> · 白寄</li>
+        </ol>
+      </div>
+      <div class="zr-rank">
+        <h3>新锐创作者榜</h3>
+        <ol>
+          <li><b>南舟</b> · 自然光 · 32 作品</li>
+          <li><b>鹿野</b> · 城市人像 · 28 作品</li>
+          <li><b>拾光的人</b> · 胶片色彩 · 24 作品</li>
+          <li><b>阿棠</b> · 模特引导 · 21 作品</li>
+          <li><b>何叙</b> · 室内布光 · 19 作品</li>
+        </ol>
+      </div>
+      <div class="zr-rank">
+        <h3>口碑高分榜</h3>
+        <ol>
+          <li><b>在地肖像计划</b> · 4.9 分</li>
+          <li><b>影棚灯光十二讲</b> · 4.9 分</li>
+          <li><b>与三位摄影师对谈</b> · 4.8 分</li>
+          <li><b>胶片色彩复现方案</b> · 4.8 分</li>
+          <li><b>雨天不撤退</b> · 4.7 分</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- S4/M15 深度解析 -->
+  <section class="zr-section zr-section-deep" id="zr-deep">
+    <div class="zr-wrap">
+      <div class="zr-sec-head">
+        <div>
+          <div class="zr-sec-kicker">INSIGHT · 深度解析</div>
+          <h2 class="zr-sec-title" style="color:#f5e6c8">读懂真人美图写真：从行业到内容生态</h2>
+          <p class="zr-sec-desc">一份面向创作者与用户的长期观察，解释这个垂直领域在做什么、难在哪里、以及我们为何坚持。</p>
+        </div>
+      </div>
+      <div class="zr-deep-grid">
+        <div>
+          <h3>一、真人美图写真的行业边界与专业底色</h3>
+          <p>提到真人美图写真，很多人第一反应是好看的画面。但真正支撑一个可持续内容的，是一整套专业流程：前期沟通、场地与光线勘察、造型与服装确认、拍摄中的引导与节奏控制、后期的色彩与质感统一。任何一个环节松动，成片都会暴露问题。这个行业看似轻，实际非常重，重在手艺，也重在对人的尊重。</p>
+          <p>在真人美图写真的创作现场，摄影师首先要解决的不是参数，而是信任。普通人站在镜头前会紧张，肩膀会抬起，下巴会后缩，笑容会僵硬。专业创作者的价值，是用具体的语言与动作让人放松，而不是要求对方“自然一点”。这也是平台在内容审核中反复强调的部分：作品可以风格化，但不能以不适为代价。我们更愿意推荐那些把拍摄对象当作合作者的作品，而不是把人物当成道具的作品。</p>
+          <p>从行业结构看，真人美图写真连接了摄影师、模特、造型师、场地、器材与后期等多个环节，天然具有多元与包容的可能。有人用一支手机完成整组创作，有人依赖完整影棚，有人专注城市街拍，有人偏爱室内静物式的人像。平台希望保留这种多元，因为单一的审美标准会让内容生态迅速枯竭。我们做的不是统一风格，而是提供一条让不同风格都被看见的路径。</p>
+          <h3>二、高清与原创：内容生态的两个底座</h3>
+          <p>高清不是参数堆砌，而是对观看体验的承诺。真人美图写真的价值往往藏在细节里：皮肤的真实纹理、布料的褶皱、空气中漂浮的尘、眼神里的高光。压缩过度会让这些细节消失，作品就只剩下轮廓。平台对上传内容设定了清晰度与色彩空间要求，也为创作者提供高清下载与转码建议，目的不是追求数字，而是让画面回到它应有的样子。</p>
+          <p>原创则是另一条底线。写真领域长期存在搬运、二改与无授权使用的问题，创作者投入大量时间完成一组作品，却常常在别处被轻易挪用。平台采用人工审核加原创声明的机制，要求上传者确认素材来源、模特授权与后期范围。我们不承诺完全杜绝，但承诺持续运营与持续治理。正版与原创不是口号，而是这个垂直领域能否长期生长的前提。</p>
+          <p>高清与原创结合，才构成品质。品质不是冷冰冰的标准，而是用户点开一条内容后，愿意看完、愿意收藏、愿意推荐给朋友。口碑就是在这些具体动作里慢慢积累的。平台把用户首选当作长期目标，但不把它当作短期指标，因为真正的信赖需要时间和稳定的交付。</p>
+          <h3>三、创作者成长：从第一条作品到稳定表达</h3>
+          <p>真人美图写真的创作者成长路径并不线性。有人从爱好者起步，先拍朋友，再拍陌生人，最后进入商业项目；有人从模特转型，先理解被拍摄的感受，再学习控制镜头；也有人从后期切入，先研究色彩，再回头补拍摄。平台的角色不是规定路径，而是提供可以被反复使用的资源：结构化的教程、可对照的测评、真实的幕后记录，以及能被同行看到的展示空间。</p>
+          <p>我们把教程看得比流量更重。一条讲清楚测光逻辑的内容，可能在短期内不如一组漂亮成片受欢迎，但它能让创作者少走半年弯路。因此平台持续投入系统课程、创作灵感与剪辑思路等模块，也鼓励创作者公开失败案例。一个愿意暴露问题的社区，比一个只展示完美的社区更有力量。</p>
+          <p>与此同时，创作者也需要被保护。平台在投稿规则中明确肖像授权、未成年人保护与敏感内容边界，并提供举报与反馈通道。我们相信，只有在安全的前提下，创作才是自由的。这也是企业社会责任的组成部分：不是额外负担，而是业务本身的必要条件。持续运营意味着规则要稳定、反馈要有人看、争议要有处理路径。</p>
+          <h3>四、长期主义：品牌故事与社区温度</h3>
+          <p>真人美图写真平台的故事并不复杂：一群人相信，认真拍摄的照片和视频值得被认真对待。我们从最早的编辑推荐做起，逐条积累作品，逐步建立创作者名录，慢慢形成专题企划与赛事机制。过程中有过判断失误，也有过内容争议，但整体方向没有改变：以真实为底色，以专业为标准，以陪伴为长期关系。</p>
+          <p>社区的温度来自具体的人。有人在评论区认真写下拍摄建议，有人把自己的踩点路线整理成文档分享，有人第一次投稿被退回后修改了三版再提交。这些细节不会出现在宣传语里，却构成了平台的真实质感。我们把用户至上理解为尊重每一次表达，也理解为在必要的时候说不。</p>
+          <p>面向未来，平台会继续在垂直领域深耕：完善高清内容标准，拓展城市与在地文化专题，支持更多元的审美表达，同时保持克制，不追逐短期热点。我们相信行业领先不是规模数字，而是当创作者想认真做一组真人美图写真时，会想到这里。官方网站会持续更新企业动态与官方发布，也欢迎每一位创作者通过投稿入口参与进来。</p>
+        </div>
+        <figure class="zr-deep-figure" style="margin:0">
+          <svg viewBox="0 0 520 420" role="img" aria-label="人像写真创作流程示意：沟通、勘察、拍摄、后期四个阶段">
+            <rect width="520" height="420" fill="#2f2741"/>
+            <circle cx="96" cy="86" r="34" fill="#e8b04b" opacity=".9"/>
+            <circle cx="150" cy="86" r="34" fill="#c0648c" opacity=".55"/>
+            <circle cx="204" cy="86" r="34" fill="#7a5aa8" opacity=".55"/>
+            <path d="M96 132v44M150 132v44M204 132v44" stroke="#6a5c82" stroke-width="3"/>
+            <rect x="52" y="176" width="200" height="3" fill="#6a5c82"/>
+            <rect x="52" y="206" width="228" height="12" rx="6" fill="#453a5b"/>
+            <rect x="52" y="206" width="150" height="12" rx="6" fill="#e8b04b"/>
+            <rect x="52" y="240" width="228" height="12" rx="6" fill="#453a5b"/>
+            <rect x="52" y="240" width="108" height="12" rx="6" fill="#c0648c"/>
+            <rect x="52" y="274" width="228" height="12" rx="6" fill="#453a5b"/>
+            <rect x="52" y="274" width="190" height="12" rx="6" fill="#7a5aa8"/>
+            <rect x="52" y="308" width="228" height="12" rx="6" fill="#453a5b"/>
+            <rect x="52" y="308" width="130" height="12" rx="6" fill="#5fa88f"/>
+            <rect x="330" y="70" width="150" height="250" rx="14" fill="#3b3150"/>
+            <circle cx="405" cy="140" r="34" fill="#f0e2d8"/>
+            <path d="M371 134c0-28 15-48 34-48s34 20 34 48c0 6-2 10-4 12 0-28-13-40-30-40s-30 12-30 40c-2-2-4-6-4-12z" fill="#4b4147"/>
+            <path d="M405 178c-24 0-42 14-50 30l-9 66h118l-9-66c-8-16-26-30-50-30z" fill="#c0648c" opacity=".8"/>
+            <text x="52" y="356" fill="#b6a9c4" font-size="13" font-family="sans-serif">沟通 · 勘察 · 拍摄 · 后期</text>
+            <text x="330" y="356" fill="#b6a9c4" font-size="13" font-family="sans-serif">信任先于技术</text>
+          </svg>
+          <figcaption>真人美图写真创作链条示意：每个环节都需要被认真对待</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- S7 企业动态 + FAQ + 合作 -->
+  <section class="zr-section zr-wrap" id="zr-faq">
+    <div class="zr-sec-head">
+      <div>
+        <div class="zr-sec-kicker">UPDATES · 企业动态与帮助</div>
+        <h2 class="zr-sec-title">真人美图写真官方发布</h2>
+        <p class="zr-sec-desc">平台规则、企划进展与常见问题集中在这里，便于创作者与合作方查阅。</p>
+      </div>
+    </div>
+    <div class="zr-log" style="margin-bottom:34px">
+      <article class="zr-log-item">
+        <div class="zr-log-date">2026.11.18</div>
+        <div><h4>「冬日柔光」企划第 3 期启动，征集至 12 月 05 日</h4><p>面向所有认证创作者开放投稿，主题为低角度自然光下的人像写真，入选作品将进入官方专题页并获得高清转码支持。</p></div>
+      </article>
+      <article class="zr-log-item">
+        <div class="zr-log-date">2026.11.10</div>
+        <div><h4>创作者扶持计划新增 20 个名额</h4><p>本轮扶持聚焦人像与在地记录方向，提供课程名额、器材试用与编辑一对一辅导，报名入口已在投稿中心开放。</p></div>
+      </article>
+      <article class="zr-log-item">
+        <div class="zr-log-date">2026.10.28</div>
+        <div><h4>内容审核规则更新：明确肖像授权与未成年人保护要求</h4><p>新版规则细化了授权材料的提交方式与审核时限，并新增争议作品的申诉通道，规则全文可在帮助中心查阅。</p></div>
+      </article>
+      <article class="zr-log-item">
+        <div class="zr-log-date">2026.10.12</div>
+        <div><h4>年度高清写真大赛报名开启，共设 6 个组别</h4><p>组别覆盖自然光人像、影棚人像、城市纪实、胶片色彩、移动端创作与新人首作，报名与上传通道同步开放。</p></div>
+      </article>
+    </div>
+
+    <h3 style="font-size:20px;margin-bottom:16px">常见问题</h3>
+    <div class="zr-faq">
+      <details>
+        <summary>如何成为真人美图写真的认证创作者？</summary>
+        <p>在个人中心提交认证申请，需提供至少 5 组原创作品、拍摄说明与模特授权材料。审核通常在 7 个工作日内完成，结果会通过站内通知反馈。</p>
+      </details>
+      <details>
+        <summary>投稿作品对清晰度有什么要求？</summary>
+        <p>建议上传 1080P 以上、码率不低于 8Mbps 的视频，或长边不小于 2000 像素的图片。平台会进行统一转码，原始文件请自行保留备份。</p>
+      </details>
+      <details>
+        <summary>拍摄他人需要准备什么授权材料？</summary>
+        <p>需取得被摄者本人书面同意，明确使用范围与期限。涉及未成年人时，必须取得监护人同意，并且不得发布任何可能造成伤害的内容。</p>
+      </details>
+      <details>
+        <summary>作品被搬运或未经授权使用怎么办？</summary>
+        <p>可通过作品页的反馈入口提交投诉，附上原创证明与侵权链接。平台核实后会下架相关内容，并视情节对账号采取限制措施。</p>
+      </details>
+      <details>
+        <summary>平台是否提供拍摄场地或器材支持？</summary>
+        <p>平台与合作影棚、器材商保持长期合作，认证创作者可申请试用与折扣。具体名额随企划周期释放，请关注企业动态。</p>
+      </details>
+      <details>
+        <summary>专题企划的入选标准是什么？</summary>
+        <p>主要看主题契合度、画面完成度、原创性与拍摄说明的完整程度。我们同样重视创作过程的可分享性，愿意公开方法的作品更受青睐。</p>
+      </details>
+      <details>
+        <summary>能否下载平台上的高清作品？</summary>
+        <p>经创作者授权开放下载的作品可下载，页面会标注授权范围。未标注的作品仅支持在线观看，请勿私自保存或二次传播。</p>
+      </details>
+    </div>
+
+    <h3 style="font-size:20px;margin:34px 0 16px">合作品牌与伙伴</h3>
+    <div class="zr-partners">
+      <div class="zr-partner"><b>光屿影棚</b><span>场地合作 · 长期</span></div>
+      <div class="zr-partner"><b>见山器材</b><span>器材支持 · 2026</span></div>
+      <div class="zr-partner"><b>南风造型</b><span>造型合作 · 专题</span></div>
+      <div class="zr-partner"><b>纸间印社</b><span>输出与装帧</span></div>
+      <div class="zr-partner"><b>城事文化</b><span>在地内容共创</span></div>
+    </div>
+  </section>
+
+  <!-- S7 投稿 CTA -->
+  <section class="zr-section zr-wrap" style="padding-top:0">
+    <div class="zr-cta-band">
+      <div>
+        <h2>把你的真人美图写真，放进官方内容生态</h2>
+        <p>无论是第一组作品还是成熟系列，投稿入口全年开放。我们提供审核反馈、高清转码与专题推荐机会，也提供清楚的授权与保护规则。</p>
+      </div>
+      <div class="zr-cta-actions">
+        <button class="zr-btn zr-btn-gold" id="zr-submit-open2" type="button">进入投稿</button>
+        <button class="zr-btn zr-btn-ghost" id="zr-report-open" type="button">反馈建议</button>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="zr-foot">
+  <div class="zr-wrap">
+    <div class="zr-foot-grid">
+      <div>
+        <h4>真人美图写真</h4>
+        <p>真人美图写真官方网站，专注原创高清人像写真影像的企业级内容平台。持续运营，坚持正版与原创，为创作者搭建品质内容生态。</p>
+        <p style="margin-top:14px">官方发布 · 精品内容 · 值得信赖</p>
+      </div>
+      <div>
+        <h4>内容导航</h4>
+        <ul>
+          <li><a href="#zr-focus">精选焦点</a></li>
+          <li><a href="#zr-videos">影像流</a></li>
+          <li><a href="#zr-topics">专题企划</a></li>
+          <li><a href="#zr-makers">创作者矩阵</a></li>
+          <li><a href="#zr-deep">深度解析</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>创作者服务</h4>
+        <ul>
+          <li><a href="#zr-faq">认证与投稿规则</a></li>
+          <li><a href="#zr-faq">肖像授权说明</a></li>
+          <li><a href="#zr-voices">口碑与榜单</a></li>
+          <li><a href="#zr-faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>联系我们</h4>
+        <ul>
+          <li>合作邮箱：brand@zhenren-photo.example</li>
+          <li>投稿咨询：creator@zhenren-photo.example</li>
+          <li>工作时间：周一至周五 10:00–18:30</li>
+          <li>内容反馈：站内反馈通道</li>
+        </ul>
+      </div>
+    </div>
+    <div class="zr-foot-bottom">
+      <span>© 2026 真人美图写真 官方网站 · 版权所有 · 持续运营中</span>
+      <span>备案号：浙ICP备2026000000号-1 · 网络文化经营许可示例</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 弹窗 -->
+<div class="zr-modal" id="zr-modal" role="dialog" aria-modal="true" aria-labelledby="zr-modal-title">
+  <div class="zr-modal-box">
+    <h3 id="zr-modal-title">提示</h3>
+    <div id="zr-modal-body"></div>
+    <div class="zr-modal-actions" id="zr-modal-actions"></div>
+  </div>
+</div>
+
+<div class="zr-toast" id="zr-toast" role="status" aria-live="polite"></div>
+<button class="zr-top" id="zr-top" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 通用工具 ---------- */
+  var toastEl = document.getElementById('zr-toast');
+  var toastTimer = null;
+  function toast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-show'); }, 2200);
+  }
+
+  var modal = document.getElementById('zr-modal');
+  var modalTitle = document.getElementById('zr-modal-title');
+  var modalBody = document.getElementById('zr-modal-body');
+  var modalActions = document.getElementById('zr-modal-actions');
+
+  function openModal(title, bodyHTML, actionsHTML){
+    modalTitle.textContent = title;
+    modalBody.innerHTML = bodyHTML;
+    modalActions.innerHTML = actionsHTML || '<button class="zr-btn zr-btn-ghost" data-close-modal type="button">关闭</button>';
+    modal.classList.add('is-open');
+    var firstInput = modal.querySelector('input,textarea,select');
+    if(firstInput){ setTimeout(function(){ firstInput.focus(); }, 60); }
+  }
+  function closeModal(){ modal.classList.remove('is-open'); }
+  modal.addEventListener('click', function(e){
+    if(e.target === modal || e.target.closest('[data-close-modal]')){ closeModal(); }
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeModal(); }
+  });
+
+  /* ---------- 公告条关闭 ---------- */
+  document.getElementById('zr-notice-close').addEventListener('click', function(){
+    var n = document.getElementById('zr-notice');
+    n.style.display = 'none';
+    document.documentElement.style.setProperty('--zr-head', '52px');
+    toast('公告条已收起');
+  });
+
+  /* ---------- 移动端导航 ---------- */
+  var burger = document.getElementById('zr-burger');
+  var nav = document.getElementById('zr-nav');
+  burger.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){
+      nav.classList.remove('is-open');
+      burger.setAttribute('aria-expanded','false');
+    }
+  });
+
+  /* ---------- 搜索反馈 ---------- */
+  var searchForm = document.getElementById('zr-search-form');
+  var searchInput = document.getElementById('zr-search-input');
+  var searchResult = document.getElementById('zr-search-result');
+  var videoItems = Array.prototype.slice.call(document.querySelectorAll('#zr-video-list .zr-vitem'));
+
+  function runSearch(q){
+    q = (q || '').trim();
+    if(!q){
+      searchResult.classList.remove('is-show');
+      videoItems.forEach(function(it){ it.style.display = ''; });
+      return;
+    }
+    var hit = 0;
+    videoItems.forEach(function(it){
+      var txt = it.textContent + ' ' + (it.getAttribute('data-tag') || '');
+      var ok = txt.indexOf(q) !== -1;
+      it.style.display = ok ? '' : 'none';
+      if(ok) hit++;
+    });
+    searchResult.classList.add('is-show');
+    searchResult.textContent = '关键词「' + q + '」匹配到 ' + hit + ' 条影像内容' +
+      (hit === 0 ? '，可尝试「构图」「影棚」「城市」等标签，或直接前往创作者矩阵浏览。' : '，已为你筛选下方列表。');
+  }
+  searchForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    runSearch(searchInput.value);
+  });
+
+  /* ---------- 标签筛选 ---------- */
+  var filterBar = document.getElementById('zr-filter-bar');
+  filterBar.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-filter]');
+    if(!btn) return;
+    Array.prototype.forEach.call(filterBar.querySelectorAll('.zr-filter'), function(b){ b.classList.remove('is-active'); });
+    btn.classList.add('is-active');
+    var f = btn.getAttribute('data-filter');
+    videoItems.forEach(function(it){
+      it.style.display = (f === 'all' || it.getAttribute('data-tag') === f) ? '' : 'none';
+    });
+    searchResult.classList.remove('is-show');
+    searchInput.value = '';
+  });
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.addEventListener('click', function(e){
+    var like = e.target.closest('[data-like]');
+    if(like){
+      var on = like.classList.toggle('is-on');
+      like.textContent = on ? '♥ 已赞' : '♡ 点赞';
+      toast(on ? '已点赞，感谢支持原创内容' : '已取消点赞');
+      return;
+    }
+    var fav = e.target.closest('[data-fav]');
+    if(fav){
+      var f = fav.classList.toggle('is-on');
+      fav.textContent = f ? '★ 已收藏' : '☆ 收藏';
+      toast(f ? '已收藏到个人片单' : '已从片单移除');
+      return;
+    }
+    var copy = e.target.closest('[data-copy]');
+    if(copy){
+      var link = 'https://zhenren-photo.example/works';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){ toast('作品链接已复制'); }, function(){ toast('复制失败，请手动选择地址'); });
+      }else{
+        toast('作品链接已复制');
+      }
+      return;
+    }
+    var rep = e.target.closest('[data-report]');
+    if(rep){
+      openReport();
+      return;
+    }
+  });
+
+  /* ---------- 复制 / 分享 ---------- */
+  document.getElementById('zr-share-open').addEventListener('click', function(){
+    openModal('分享真人美图写真官网',
+      '<p>选择你常用的分享方式，把平台推荐给同样喜欢人像写真的朋友。</p>' +
+      '<div class="zr-tags" style="margin:16px 0 4px">' +
+      '<button class="zr-btn zr-btn-ghost" type="button" data-share-copy>复制官网链接</button>' +
+      '</div>' +
+      '<p style="font-size:12.5px;color:#8b8296;margin-top:14px">微信、微博、QQ 等平台的分享请在对应应用内完成。</p>',
+      '<button class="zr-btn zr-btn-primary" data-share-copy type="button">复制链接</button>' +
+      '<button class="zr-btn zr-btn-ghost" data-close-modal type="button">关闭</button>');
+  });
+  modal.addEventListener('click', function(e){
+    if(e.target.closest('[data-share-copy]')){
+      var text = '真人美图写真官方网站 · 原创高清人像写真影像平台';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ closeModal(); toast('官网信息已复制，去分享吧'); }, function(){ toast('复制失败'); });
+      }else{
+        closeModal(); toast('官网信息已复制，去分享吧');
+      }
+    }
+  });
+
+  /* ---------- 投稿 ---------- */
+  function openSubmit(){
+    openModal('投稿 · 真人美图写真',
+      '<p>填写基本信息，编辑会在 7 个工作日内给出审核反馈。请确认已取得被摄者授权。</p>' +
+      '<label for="zr-sub-name">创作者昵称</label>' +
+      '<input id="zr-sub-name" type="text" placeholder="例如：沈砚">' +
+      '<label for="zr-sub-type">投稿类型</label>' +
+      '<select id="zr-sub-type"><option>自然光人像</option><option>影棚人像</option><option>城市纪实</option><option>教程与幕后</option></select>' +
+      '<label for="zr-sub-note">作品说明</label>' +
+      '<textarea id="zr-sub-note" rows="3" placeholder="简述拍摄思路、器材与授权情况"></textarea>',
+      '<button class="zr-btn zr-btn-ghost" data-close-modal type="button">取消</button>' +
+      '<button class="zr-btn zr-btn-gold" data-submit-send type="button">提交投稿</button>');
+  }
+  document.getElementById('zr-submit-open').addEventListener('click', openSubmit);
+  document.getElementById('zr-submit-open2').addEventListener('click', openSubmit);
+  modal.addEventListener('click', function(e){
+    if(e.target.closest('[data-submit-send]')){
+      var name = (document.getElementById('zr-sub-name') || {}).value || '';
+      if(!name.trim()){ toast('请先填写创作者昵称'); return; }
+      closeModal();
+      toast('投稿已提交，编辑将在 7 个工作日内反馈');
+    }
+  });
+
+  /* ---------- 反馈 ---------- */
+  function openReport(){
+    openModal('反馈与举报',
+      '<p>如发现内容侵权、未授权使用或不当画面，请留下具体信息，我们会尽快核实。</p>' +
+      '<label for="zr-rep-type">问题类型</label>' +
+      '<select id="zr-rep-type"><option>版权与搬运</option><option>肖像授权问题</option><option>内容不适</option><option>功能建议</option></select>' +
+      '<label for="zr-rep-note">补充说明</label>' +
+      '<textarea id="zr-rep-note" rows="3" placeholder="请描述具体作品与问题"></textarea>',
+      '<button class="zr-btn zr-btn-ghost" data-close-modal type="button">取消</button>' +
+      '<button class="zr-btn zr-btn-primary" data-rep-send type="button">提交反馈</button>');
+  }
+  document.getElementById('zr-report-open').addEventListener('click', openReport);
+  modal.addEventListener('click', function(e){
+    if(e.target.closest('[data-rep-send]')){
+      closeModal();
+      toast('反馈已收到，我们会尽快处理');
+    }
+  });
+
+  /* ---------- 创作者档案 ---------- */
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('[data-maker]');
+    if(!btn) return;
+    var parts = btn.getAttribute('data-maker').split('|');
+    openModal(parts[0],
+      '<p style="color:#c0648c;font-weight:600;font-size:13.5px">' + parts[1] + '</p>' +
+      '<p>' + parts[2] + '</p>' +
+      '<p style="font-size:13px;color:#8b8296">该创作者已在真人美图写真平台持续更新作品，所有内容均为原创并完成授权确认。</p>');
+  });
+
+  /* ---------- 回到顶部 ---------- */
+  var topBtn = document.getElementById('zr-top');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480){ topBtn.classList.add('is-show'); } else { topBtn.classList.remove('is-show'); }
+  }, { passive: true });
+  topBtn.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  /* ---------- 卡片悬停微动效（CSS 之外补充键盘可达性） ---------- */
+  document.querySelectorAll('.zr-mini, .zr-maker, .zr-topic').forEach(function(card){
+    card.addEventListener('focusin', function(){ card.style.boxShadow = 'var(--zr-shadow)'; });
+    card.addEventListener('focusout', function(){ card.style.boxShadow = ''; });
+  });
+
+})();
+</script>
+</body>
+              </html>
